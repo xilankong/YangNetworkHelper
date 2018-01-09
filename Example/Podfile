@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YangNetworkHelper_Example' do
+  pod 'YangNetworkHelper', :path => '../'
+
+  target 'YangNetworkHelper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
