@@ -1,0 +1,6 @@
+framework module YangNetworkHelper {
+  umbrella header "YangNetworkHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

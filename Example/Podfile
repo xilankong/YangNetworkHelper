@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'YangNetworkHelper_Example' do
   pod 'YangNetworkHelper', :path => '../'
-
+  pod 'AFNetworking'
   target 'YangNetworkHelper_Tests' do
     inherit! :search_paths
 

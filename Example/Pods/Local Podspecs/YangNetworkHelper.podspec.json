@@ -1,0 +1,32 @@
+{
+  "name": "YangNetworkHelper",
+  "version": "0.1.0",
+  "summary": "A short description of YangNetworkHelper.",
+  "description": "网络中间层",
+  "homepage": "https://github.com/xilankong/YangNetworkHelper",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "xilankong": "xilankong@126.com"
+  },
+  "source": {
+    "git": "https://github.com/xilankong/YangNetworkHelper.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "subspecs": [
+    {
+      "name": "OC",
+      "source_files": "YangNetworkHelper/Classes/OC/**/*",
+      "dependencies": {
+        "AFNetworking": [
+
+        ]
+      }
+    }
+  ]
+}

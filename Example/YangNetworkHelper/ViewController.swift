@@ -7,17 +7,48 @@
 //
 
 import UIKit
+import YangNetworkHelper
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, APICallBackDelegate {
 
+  
+    var btn = UIButton(type: UIButtonType.custom)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        btn.frame = CGRect(x: 0, y: 100, width: 100, height: 30)
+        btn.setTitleColor(UIColor.blue, for: UIControlState.normal)
+        btn.setTitle("测试", for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(doRequest), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(btn)
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func doRequest(){
+        
+        let api = ViewClientAPI()
+        api.delegate = self
+        api.start { (resp, error) in
+            print(resp,"-------")
+        }
+        //        api.cancle()
+    }
+    
+    
+    public func api(_ api: BaseAPI!, success responseObject: Any!) {
+        
+        print(responseObject,"-------")
+        
+    }
+    
+    public func api(_ api: BaseAPI!, failue error: ReqCallBackCode!) {
+        print(error,"-------")
     }
 
 }
