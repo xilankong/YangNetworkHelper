@@ -27,6 +27,15 @@
 
         ]
       }
+    },
+    {
+      "name": "SWIFT",
+      "source_files": "YangNetworkHelper/Classes/SWIFT/**/*",
+      "dependencies": {
+        "Alamofire": [
+
+        ]
+      }
     }
   ]
 }

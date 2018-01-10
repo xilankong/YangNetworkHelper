@@ -1,0 +1,12 @@
+{
+	"ret": true,
+	"res": {
+		"data": {
+			"level": "0",
+			"log": "升级提示信息",
+			"version": "1.0.0",
+			"url": "",
+			"updateViaStore": "0"
+		}
+	}
+}

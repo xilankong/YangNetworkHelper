@@ -18,4 +18,9 @@ Pod::Spec.new do |s|
     oc.dependency 'AFNetworking'
   end
 
+  s.subspec 'SWIFT' do |swift|
+    swift.source_files = 'YangNetworkHelper/Classes/SWIFT/**/*'
+    swift.dependency 'Alamofire'
+  end
+
 end
